@@ -40,6 +40,8 @@ import java.util.concurrent.TimeUnit;
 public class IncrementCounter extends AbstractFlowlet {
   private static final Logger LOG = LoggerFactory.getLogger(IncrementCounter.class);
   private static final Long MSIN1HR = TimeUnit.HOURS.toMillis(1);
+  //Consider past HISTORY hours of counts for computing the score for each HashTag.
+  private static final Long HISTORY = 12L;
   private Metrics tagMetrics;
   private OutputEmitter<PrefixData> tag;
 
@@ -78,7 +80,7 @@ public class IncrementCounter extends AbstractFlowlet {
       table.write(entry);
     }
 
-    Iterator<TimeseriesTable.Entry> timeCols = table.read(Bytes.toBytes(hashtag), 0, hourCount);
+    Iterator<TimeseriesTable.Entry> timeCols = table.read(Bytes.toBytes(hashtag), hourCount - HISTORY, hourCount);
     TreeMap<Long, Long> hourValue = new TreeMap<Long, Long>();
     while (timeCols.hasNext()) {
       TimeseriesTable.Entry e = timeCols.next();
