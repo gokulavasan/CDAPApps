@@ -15,10 +15,10 @@ You can then deploy the Application JAR (found in the target directory) on to CD
 
 The TwitterFlow Flow in this Application needs the following four runtime arguments to pull in realtime Twitter feed.
 
-ConsumerKey
-ConsumerSecret
-AccessToken
-AccessTokenSecret
+- ```ConsumerKey```
+- ```ConsumerSecret```
+- ```AccessToken```
+- ```AccessTokenSecret```
 
 Follow the steps at [Twitter oauth access tokens](https://dev.twitter.com/oauth/overview/application-owner-access-tokens) to obtain the above credentials.
 
