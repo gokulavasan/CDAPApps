@@ -52,6 +52,7 @@ public class IncrementCounter extends AbstractFlowlet {
   @ProcessInput
   public void process(String hashtag) {
     processTag(hashtag);
+    tagMetrics.count("tags", 1);
   }
 
   @ProcessInput
