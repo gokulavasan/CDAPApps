@@ -37,7 +37,7 @@ starting and querying a procedure can also be executed through HTTP calls.
 
 Visit [HTTP RESTful API](http://docs.cask.co/cdap/current/en/api.html#http-restful-api) for more info.
 
-Follow the latest on cdap on irc freenode (#cdap channel) and cdap-user@googlegroups.com.
+Follow the latest on CDAP on irc freenode (#cdap channel) and cdap-user@googlegroups.com.
 
 ## License and Trademarks
 
