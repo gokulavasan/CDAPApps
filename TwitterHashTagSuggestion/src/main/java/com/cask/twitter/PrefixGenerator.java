@@ -36,7 +36,7 @@ public class PrefixGenerator extends AbstractFlowlet {
     String tag = tagScore.getHashtag();
     for (int i = 1; i <= tag.length(); i++) {
       PrefixData data = new PrefixData(tag.substring(0, i), tag, tagScore.getScore());
-      prefixEmitter.emit(data, "prefixHash", data.getPrefix());
+      prefixEmitter.emit(data, "prefixHash", data.getPrefix().hashCode());
     }
   }
 }

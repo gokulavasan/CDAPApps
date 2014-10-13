@@ -97,6 +97,6 @@ public class IncrementCounter extends AbstractFlowlet {
     }
 
     PrefixData data = new PrefixData(hashtag, score);
-    tag.emit(data, "tagHash", data.getHashtag());
+    tag.emit(data, "tagHash", data.getHashtag().hashCode());
   }
 }

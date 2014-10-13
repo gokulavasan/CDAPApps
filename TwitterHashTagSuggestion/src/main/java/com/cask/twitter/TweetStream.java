@@ -108,7 +108,7 @@ public class TweetStream extends AbstractFlowlet {
   }
 
   public void procMethod(String tweet) {
-    tweetText.emit(tweet, "wordHash", tweet);
+    tweetText.emit(tweet, "wordHash", tweet.hashCode());
   }
 }
 
