@@ -7,7 +7,8 @@ The suggestions are kept up-to-date with the realtime stream.
 
 Note : If you have not downloaded CDAP, you do so by visiting : [CDAP Downloads](http://cask.co/downloads)
 
-You can build this CDAP Application by executing in the current directory :
+You can build this CDAP Application by executing the following in the current directory :
+
 ```mvn clean package``` 
 
 You can then deploy the Application JAR (found in the target directory) on to CDAP. It might be useful to review the
@@ -37,7 +38,7 @@ starting and querying a procedure can also be executed through HTTP calls.
 
 Visit [HTTP RESTful API](http://docs.cask.co/cdap/current/en/api.html#http-restful-api) for more info.
 
-Follow the latest on CDAP on irc freenode (#cdap channel) and cdap-user@googlegroups.com.
+Follow the latest on CDAP on irc.freenode.net (#cdap channel) and cdap-user@googlegroups.com.
 
 ## License and Trademarks
 
